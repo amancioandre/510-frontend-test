@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid style="height: 100vh">
+  <v-container fluid>
     <v-row>
       <v-col class="d-flex flex-column flex-nowrap align-center justify-center">
         <Invoice :invoice="invoice" @click.native="onClick(invoice.id)">

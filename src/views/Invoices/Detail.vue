@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid style="height: 100vh">
+  <v-container fluid>
     <v-row class="d-flex flex-nowrap">
       <v-col class="d-flex flex-nowrap align-center justify-center">
         <invoice :invoice="invoice" />
