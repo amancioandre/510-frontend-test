@@ -93,7 +93,7 @@ export default {
 
 .list-holders {
   position: relative;
-  background-color: red;
+  background-color: #fff;
   border-radius: 10px;
   /* background-color: inherit; */
 }

@@ -16,7 +16,7 @@
             alt=""
           />
         </v-col>
-        <v-col cols="2" class="d-flex align-end">
+        <v-col cols="2" class="d-flex justify-end">
           <v-chip outlined color="amber lighten-1" text-color="amber lighten-1"
             >Unpaid</v-chip
           >

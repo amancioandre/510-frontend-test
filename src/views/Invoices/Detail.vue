@@ -1,12 +1,18 @@
 <template>
   <v-container fluid>
-    <v-row class="d-flex flex-nowrap">
+    <v-row
+      id="invoice-details"
+      class="d-flex flex-nowrap"
+      style="overflow: scroll;"
+    >
       <v-col class="align-self-center col-1">
         <div class="d-flex justify-end">
-          <img
+          <v-img
             src="../../assets/img/icon-arrow-left.png"
-            alt=""
-            @click="() => router.push('/invoices')"
+            max-height="28"
+            max-width="28"
+            alt="back-icon"
+            @click="() => $router.push('/invoices')"
           />
         </div>
       </v-col>
@@ -81,4 +87,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#invoice-details::-webkit-scrollbar {
+  width: 0;
+}
+</style>
