@@ -25,10 +25,6 @@ export default {
       type: Number,
       required: true,
     },
-    color: {
-      type: String,
-      default: "#FFF",
-    },
   },
 
   mounted() {},

@@ -1,8 +1,21 @@
 <template>
   <v-container fluid>
     <v-row class="d-flex flex-nowrap">
+      <v-col class="align-self-center col-1">
+        <div class="d-flex justify-end">
+          <img
+            src="../../assets/img/icon-arrow-left.png"
+            alt=""
+            @click="() => router.push('/invoices')"
+          />
+        </div>
+      </v-col>
       <v-col class="d-flex flex-nowrap align-center justify-center">
-        <invoice :invoice="invoice" />
+        <Invoice :invoice="invoice">
+          <template v-slot:shadow>
+            <Shadow :placement="'left'" :width="784" :height="550" />
+          </template>
+        </Invoice>
       </v-col>
       <v-col class="d-flex flex-nowrap">
         <detail
@@ -16,12 +29,13 @@
 </template>
 
 <script>
-import { Invoice, Detail } from "../../components/Invoice";
+import { Invoice, Detail, Shadow } from "../../components/Invoice";
 
 export default {
   components: {
     Invoice,
     Detail,
+    Shadow,
   },
 
   data() {
@@ -67,4 +81,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>

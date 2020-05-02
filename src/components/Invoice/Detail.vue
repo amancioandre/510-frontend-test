@@ -5,9 +5,9 @@
     flat
     class="ma-4 detail-padding detail-features"
   >
-    <v-card-tile class="mb-8 headline font-weight-light detail-headline">
+    <div class="mb-8 headline font-weight-light detail-headline">
       {{ transaction.entity }}
-    </v-card-tile>
+    </div>
 
     <div class="mt-6 body-2">
       {{ transaction.name }}
