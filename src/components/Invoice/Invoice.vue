@@ -1,7 +1,7 @@
 <template>
   <v-card
     min-width="784"
-    max-height="500"
+    min-height="550"
     flat
     class="ma-4 invoice-padding invoice-features"
   >

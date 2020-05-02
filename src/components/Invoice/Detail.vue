@@ -1,7 +1,7 @@
 <template>
   <v-card
-    min-width="517"
-    min-height="500"
+    min-width="600"
+    max-height="550"
     flat
     class="ma-4 detail-padding detail-features"
   >
@@ -21,18 +21,73 @@
 
     <v-divider class="my-6"></v-divider>
 
-    <v-row>
-      <v-col class="col-4">
-        Codez
-      </v-col>
-      <v-col class="col-8">
-        STFF
-      </v-col>
-    </v-row>
+    <div class="caption">
+      <v-row>
+        <v-col class="col-5">
+          Code
+        </v-col>
+        <v-col class="col-7">
+          {{ transaction.code }}
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-5">
+          Operating Name
+        </v-col>
+        <v-col class="col-7">
+          {{ transaction.operatingName }}
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-5">
+          Function Description
+        </v-col>
+        <v-col class="col-7">
+          {{ transaction.functionDescription }}
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-5">
+          Trade Register Number
+        </v-col>
+        <v-col class="col-7">
+          {{ transaction.tradeRegisterNumber }}
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-5">
+          VAT Number
+        </v-col>
+        <v-col class="col-7">
+          {{ transaction.VATNumber }}
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-5">
+          IBAN Number
+        </v-col>
+        <v-col class="col-7">
+          {{ transaction.IBANNumber }}
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col class="col-5">
+          BIC Code
+        </v-col>
+        <v-col class="col-7">
+          {{ transaction.BICCode }}
+        </v-col>
+      </v-row>
+    </div>
   </v-card>
 </template>
 
 <script>
+// { entity: "Seller", address: "Des Benjoins, Rue 2, Saint-Denis", otherAddress:
+// "1202 RE, Reunion", code: "STFF", operatingName: "STF France",
+// functionDescription: "Local Operations, Manufacturing, Sales, Marketing",
+// tradeRegisterNumber: "004101534", VATNumber: "1101317918C49", IBANNumber:
+// "RE11INGB4254456990", BICCode: "INGBRA5C", },
 export default {
   props: {
     transaction: {
@@ -54,6 +109,6 @@ export default {
 }
 
 .detail-padding {
-  padding: 40px 60px !important;
+  padding: 30px 50px !important;
 }
 </style>
