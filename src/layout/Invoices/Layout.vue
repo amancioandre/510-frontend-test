@@ -6,8 +6,9 @@
         Show me Invoices of STF Belgium from January to April 2018
       </div>
     </v-container>
-    <router-view></router-view>
-    <v-container> </v-container>
+    <transition name="view" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </v-content>
 </template>
 
@@ -19,5 +20,24 @@
     rgba(247, 250, 255, 1) 0%,
     rgba(226, 231, 239, 1) 100%
   );
+}
+
+.view-enter-active,
+.view-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.view-enter-active {
+  transition-delay: 0.2s;
+}
+
+.view-enter,
+.view-leave-to {
+  opacity: 0;
+}
+
+.view-enter-to,
+.view-leave {
+  opacity: 1;
 }
 </style>
