@@ -10,7 +10,7 @@
         <v-img
           max-width="100px"
           max-height="100px"
-          src="../../assets/logo-510.png"
+          src="../../assets/img/logo-510.png"
           alt=""
         />
       </v-col>
