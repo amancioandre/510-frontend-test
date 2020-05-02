@@ -13,7 +13,8 @@ export default [
         component: List,
       },
       {
-        path: ":id",
+        path: ":invoice_id",
+        name: "invoice-detail",
         component: Detail,
       },
     ],

@@ -26,7 +26,7 @@
           Invoice
         </h4>
         <h2 class="headline font-weight-light invoice-headline">
-          H3110017
+          {{ invoice.id }}
         </h2>
       </v-col>
       <v-col class="pa-2">
@@ -34,7 +34,7 @@
           Total amount
         </h4>
         <h2 class="headline text-end font-weight-light invoice-headline">
-          € 204
+          € {{ invoice.totalAmount }}
         </h2>
       </v-col>
     </v-row>
@@ -44,7 +44,7 @@
           Buyer Name
         </h4>
         <h2 class="headline font-weight-light">
-          STF FRANCE
+          {{ invoice.buyerName }}
         </h2>
       </v-col>
       <v-col class="pa-2">
@@ -52,7 +52,7 @@
           Seller Name
         </h4>
         <h2 class="headline font-weight-light">
-          STF BELGIUM
+          {{ invoice.sellerName }}
         </h2>
       </v-col>
     </v-row>
@@ -62,7 +62,7 @@
           Started
         </h4>
         <h2 class="headline font-weight-light">
-          14 Feb 2018
+          {{ invoice.started }}
         </h2>
       </v-col>
       <v-col class="pa-2">
@@ -70,7 +70,7 @@
           Blockchain Address
         </h4>
         <h2 class="headline font-weight-light">
-          0x4E5748...c81868F6
+          {{ invoice.blockchainAddress }}
         </h2>
       </v-col>
     </v-row>
@@ -78,7 +78,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    invoice: {
+      type: Object,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style scoped>
