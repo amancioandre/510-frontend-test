@@ -1,8 +1,10 @@
 <template>
   <v-container fluid style="height: 100vh">
-    <v-row>
+    <v-row class="d-flex flex-nowrap">
       <v-col class="d-flex flex-nowrap align-center justify-center">
         <invoice :invoice="invoice" />
+      </v-col>
+      <v-col class="d-flex flex-nowrap">
         <detail
           v-for="transaction in invoice.transaction"
           :key="`transaction-${transaction.entity}`"
