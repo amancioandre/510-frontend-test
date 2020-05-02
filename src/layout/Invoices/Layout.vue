@@ -1,7 +1,7 @@
 <template>
   <v-content class="d-flex align-stretch base-gradient">
     <v-container fluid class="d-flex flex-row align-center">
-      <img src="../../assets/button-el.png" alt="return button" />
+      <img src="../../assets/img/button-el.png" alt="return button" />
       <div>
         Show me Invoices of STF Belgium from January to April 2018
       </div>
