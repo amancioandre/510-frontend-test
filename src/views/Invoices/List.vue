@@ -1,24 +1,24 @@
 <template>
-  <v-container fluid>
-    <v-row>
-      <v-col class="d-flex flex-column flex-nowrap align-center justify-center">
-        <Invoice :invoice="invoice" @click.native="onClick(invoice.id)">
-          <template v-slot:shadow>
-            <Shadow :height="550" :width="784" :color="'#FFF'" />
-          </template>
-        </Invoice>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-content>
+    <v-container fluid>
+      <v-row id="invoice-details" style="overflow: scroll;">
+        <v-col
+          class="d-flex flex-column flex-nowrap align-center justify-center"
+        >
+          <Invoice :invoice="invoice" @click.native="onClick(invoice.id)">
+          </Invoice>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-content>
 </template>
 
 <script>
-import { Invoice, Shadow } from "../../components/Invoice";
+import { Invoice } from "../../components/Invoice";
 
 export default {
   components: {
     Invoice,
-    Shadow,
   },
 
   data() {
@@ -47,4 +47,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#invoice-details::-webkit-scrollbar {
+  width: 14px;
+}
+</style>

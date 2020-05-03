@@ -1,6 +1,7 @@
 <template>
   <v-card
-    min-width="600"
+    min-width="500"
+    max-width="500"
     max-height="550"
     flat
     class="ma-4 detail-padding detail-features"
@@ -83,11 +84,6 @@
 </template>
 
 <script>
-// { entity: "Seller", address: "Des Benjoins, Rue 2, Saint-Denis", otherAddress:
-// "1202 RE, Reunion", code: "STFF", operatingName: "STF France",
-// functionDescription: "Local Operations, Manufacturing, Sales, Marketing",
-// tradeRegisterNumber: "004101534", VATNumber: "1101317918C49", IBANNumber:
-// "RE11INGB4254456990", BICCode: "INGBRA5C", },
 export default {
   props: {
     transaction: {
