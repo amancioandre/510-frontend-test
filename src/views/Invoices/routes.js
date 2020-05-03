@@ -1,6 +1,6 @@
 import InvoiceLayout from "../../layout/Invoices";
 
-const List = () => import("./List");
+const Home = () => import("./Home");
 const Detail = () => import("./Detail");
 
 export default [
@@ -10,12 +10,15 @@ export default [
     children: [
       {
         path: "",
-        component: List,
-      },
-      {
-        path: ":invoice_id",
-        name: "invoice-detail",
-        component: Detail,
+        name: "invoice",
+        component: Home,
+        children: [
+          {
+            path: ":invoice_id",
+            name: "invoice-detail",
+            component: Detail,
+          },
+        ],
       },
     ],
   },

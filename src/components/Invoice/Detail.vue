@@ -4,7 +4,7 @@
     max-width="500"
     max-height="550"
     flat
-    class="ma-4 detail-padding detail-features"
+    class="my-3 mr-9 detail-padding detail-features"
   >
     <div class="mb-8 headline font-weight-light detail-headline">
       {{ transaction.entity }}

@@ -1,44 +1,19 @@
 <template>
-  <v-content>
-    <transition name="detail" mode="out-in" leave>
-      <v-container fluid>
-        <v-row id="invoice-details" style="overflow: scroll;">
-          <v-col
-            class="d-flex flex-nowrap align-center justify-end offset-md-2"
-          >
-            <div
-              class="d-flex justify-center"
-              style="z-index: 50;"
-              @click="goBack"
-            >
-              <v-img
-                src="../../assets/img/icon-arrow-left.png"
-                max-height="28"
-                max-width="28"
-                alt="back-icon"
-              />
-            </div>
-            <Invoice :invoice="invoice"> </Invoice>
-            <transition name="first-transaction" appear>
-              <detail :transaction="invoice.transaction[0]" />
-            </transition>
-            <transition name="second-transaction" appear>
-              <detail :transaction="invoice.transaction[1]" />
-            </transition>
-          </v-col>
-          <v-col class="col-3"> </v-col>
-        </v-row>
-      </v-container>
+  <v-col class="d-flex flex-nowrap align-start">
+    <transition name="first-transaction" appear leave>
+      <detail :transaction="invoice.transaction[0]" />
     </transition>
-  </v-content>
+    <transition name="second-transaction" appear leave>
+      <detail :transaction="invoice.transaction[1]" />
+    </transition>
+  </v-col>
 </template>
 
 <script>
-import { Invoice, Detail } from "../../components/Invoice";
+import { Detail } from "../../components/Invoice";
 
 export default {
   components: {
-    Invoice,
     Detail,
   },
 
@@ -81,12 +56,6 @@ export default {
         ],
       },
     };
-  },
-
-  methods: {
-    goBack() {
-      this.$router.push("/invoices");
-    },
   },
 };
 </script>
