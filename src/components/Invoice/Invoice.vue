@@ -64,7 +64,7 @@
           Started
         </h4>
         <h2 class="headline font-weight-light">
-          {{ invoice.started }}
+          {{ invoice.started | date }}
         </h2>
       </v-col>
       <v-col class="pa-2">
@@ -72,7 +72,7 @@
           Blockchain Address
         </h4>
         <h2 class="headline font-weight-light">
-          {{ invoice.blockchainAddress }}
+          {{ invoice.blockchainAddress | truncate(16) }}
         </h2>
       </v-col>
     </v-row>

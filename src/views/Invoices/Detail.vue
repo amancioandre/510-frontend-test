@@ -24,8 +24,8 @@ export default {
         totalAmount: 204,
         buyerName: "STF France",
         sellerName: "STF Belgium",
-        started: "14 Feb 2018",
-        blockchainAddress: "0x4E5748...c81868F6",
+        started: new Date(2018, 2, 14),
+        blockchainAddress: "0x4E5748EJQLb8O33nHiwEJhc81868F6",
         transaction: [
           {
             entity: "Buyer",
