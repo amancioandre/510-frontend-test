@@ -6,11 +6,36 @@
         Show me Invoices of STF Belgium from January to April 2018
       </div>
     </v-container>
-    <transition name="detail" mode="out-in">
-      <router-view></router-view>
-    </transition>
+    <router-view></router-view>
+    <v-container fluid class="d-flex align-stretch justify-end pr-12">
+      <v-btn
+        class="mx-2"
+        x-large
+        fab
+        color="blue"
+        v-if="$route.name === 'invoice-detail'"
+      >
+        <v-img
+          max-width="32px"
+          max-height="32px"
+          src="../../assets/img/icon-wallet.png"
+          style="filter: brightness(200%);"
+        ></v-img>
+      </v-btn>
+    </v-container>
   </v-content>
 </template>
+
+<script>
+export default {
+  compute: {
+    detail() {
+      console.log(this.$route.name === "invoice-detail");
+      return this.$route.name === "invoice-detail";
+    },
+  },
+};
+</script>
 
 <style lang="css" scoped>
 .base-gradient {
@@ -20,10 +45,5 @@
     rgba(247, 250, 255, 1) 0%,
     rgba(226, 231, 239, 1) 100%
   );
-}
-
-.detail-enter-active,
-.detail-leave-active {
-  transition: transform 0.8s ease-in-out;
 }
 </style>
