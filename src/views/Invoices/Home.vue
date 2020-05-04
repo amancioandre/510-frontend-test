@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-row
         id="invoice-details"
-        style="overflow: scroll;"
+        style="overflow-x: scroll;"
         class="d-flex flex-nowrap"
       >
         <v-col
@@ -23,14 +23,18 @@
         <v-col
           class="d-flex flex-column flex-nowrap align-center justify-start"
         >
-          <!-- <transition :name="transitionName" mode="out-in"> -->
           <Invoice :invoice="invoice" v-if="detailRoute" />
+          <Shadow
+            placement="left"
+            :width="784"
+            :height="550"
+            v-if="detailRoute"
+          />
           <Invoice
             :invoice="invoice"
             @click.native="onClick(invoice.id)"
-            v-else
+            v-if="!detailRoute"
           />
-          <!-- </transition> -->
           <Shadow
             placement="bottom"
             :width="784"
@@ -112,7 +116,7 @@ export default {
 }
 .home-enter {
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(30%);
 }
 .home-leave {
   transform: translate(0px);
@@ -122,7 +126,7 @@ export default {
   transform: translateY(0px);
 }
 .home-leave-to {
-  transform: translateX(-400px);
+  transform: translateX(-100%);
 }
 
 /* .detail-enter-active,

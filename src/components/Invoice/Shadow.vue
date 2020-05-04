@@ -57,22 +57,22 @@ export default {
               this.width}px; height: ${this.height}px`,
             third: `top: ${this.height * 0.11}px; width: ${0.7 *
               this.width}px; height: ${this.height}px`,
-            position: `top: -${-2 * this.height}px;`,
+            position: `top: -${-2 * this.height}px; position: absolute`,
             place: "column",
           };
           break;
         case "left":
           result = {
-            first: `left: -${15}px; height: ${this.height -
+            first: `left: ${this.width / 3 - 70}px; height: ${this.height -
               0.1 * this.height}px; width: ${this.width}px`,
-            second: `left: ${-this.width / 3 - 2 * 15}px; height: ${this
-              .height -
+            second: `left: ${this.width / 3 - 85}px; height: ${this.height -
               0.2 * this.height}px; width: ${this.width}px`,
-            third: `left: ${(-2 * this.width) / 3 - 3 * 15}px; height: ${this
-              .height -
+            third: `left: ${this.width / 3 - 100}px; height: ${this.height -
               0.3 * this.height}px; width: ${this.width}px`,
-            position: `top: ${-this.height +
-              0.05 * this.height}px; left: -${0}px;`,
+            position: `top: -${this.height / 2 + 10}px; left: -${(2 *
+              this.width) /
+              3 +
+              75}px; position: relative`,
             place: "row",
           };
           break;
@@ -85,8 +85,8 @@ export default {
 
 <style scoped>
 .wrapper {
-  position: absolute;
   max-height: 550px;
+  max-width: 784px;
 }
 
 .list-holders {

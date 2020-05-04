@@ -1,11 +1,11 @@
 <template>
   <v-col class="d-flex flex-nowrap align-start">
-    <transition name="first-transaction" appear leave>
-      <detail :transaction="invoice.transaction[0]" />
-    </transition>
-    <transition name="second-transaction" appear leave>
-      <detail :transaction="invoice.transaction[1]" />
-    </transition>
+    <!-- <transition name="first-transaction" appear leave> -->
+    <detail :transaction="invoice.transaction[0]" />
+    <!-- </transition> -->
+    <!-- <transition name="second-transaction" appear leave> -->
+    <detail :transaction="invoice.transaction[1]" />
+    <!-- </transition> -->
   </v-col>
 </template>
 
